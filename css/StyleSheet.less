@@ -1,0 +1,180 @@
+﻿@color_1: #fff;
+@color_2: #00abd0;
+@font_family_1: 'Source Sans Pro';
+@background_color_1: #0094b4;
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+* {
+    font-family: @font_family_1;
+    font-weight: 300;
+    font-size: 1.1em;
+}
+
+h1 {
+    font-family: @font_family_1;
+    font-weight: 300;
+    font-size: 1.1em;
+    margin-top: 70px;
+    font-size: 4em;
+    color: @color_2;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+a {
+    &:hover {
+        color: @color_1;
+        background: #0094b4;
+    }
+}
+
+header {
+    background: #00abd0;
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    ul {
+        list-style-type: none;
+
+        li {
+            display: inline;
+            float: left;
+
+            a {
+                color: @color_1;
+                padding: 20px 30px;
+                display: block;
+            }
+        }
+    }
+}
+
+#toggleMenu {
+    display: none;
+}
+
+#menuOut {
+    display: none;
+}
+
+h2 {
+    margin-top: 70px;
+    font-size: 2em;
+    color: @color_2;
+}
+
+#right {
+    float: right;
+    position: relative;
+    right: 60px;
+    width: 200px;
+}
+
+.row {
+    width: 60%;
+}
+
+.selected {
+    background-color: @background_color_1;
+}
+
+#ikony {
+    display: inline;
+    float: left;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 64.063em) {
+    header {
+        ul {
+            li {
+                a {
+                    padding: 20px 15px;
+                    font-size: .9em;
+                }
+            }
+        }
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .row {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 40.063em) {
+    header {
+        ul {
+            display: none;
+            background: #00abd0;
+            height: 100%;
+            position: absolute;
+            top: -30px;
+            left: -20px;
+
+            li {
+                display: block !important;
+                clear: both;
+                background: #00a1c4;
+                width: 100%;
+
+                a {
+                    padding: 10px 38px;
+
+                    &:hover {
+                        background: #0094b4;
+                    }
+                }
+            }
+        }
+
+        background: none;
+    }
+
+    #toggleMenu {
+        display: block;
+        margin: 30px;
+    }
+
+    .row {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-top: 15px;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    a {
+        &:hover {
+            background: none;
+        }
+    }
+
+    #menuOut {
+        display: block;
+        cursor: pointer;
+        margin: 90px 0 40px 30px;
+        background: none;
+    }
+}
